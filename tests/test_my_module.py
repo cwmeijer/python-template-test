@@ -1,15 +1,15 @@
-"""Tests for the my_python_package.my_module module.
-"""
+"""Tests for the my_python_package.my_module module."""
 import pytest
-
 from my_python_package.my_module import hello
 
 
 def test_hello():
+    """Example using assert."""
     assert hello('nlesc') == 'Hello nlesc!'
 
 
 def test_hello_with_error():
+    """Example of testing for raised errors."""
     with pytest.raises(ValueError) as excinfo:
         hello('nobody')
     assert 'Can not say hello to nobody' in str(excinfo.value)
@@ -17,8 +17,10 @@ def test_hello_with_error():
 
 @pytest.fixture
 def some_name():
+    """Example fixture."""
     return 'Jane Smith'
 
 
 def test_hello_with_fixture(some_name):
+    """Example using a fixture."""
     assert hello(some_name) == 'Hello Jane Smith!'

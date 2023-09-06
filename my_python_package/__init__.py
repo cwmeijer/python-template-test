@@ -1,6 +1,5 @@
-"""Documentation about my_python_package"""
+"""Documentation about my_python_package."""
 import logging
-
 
 logging.getLogger(__name__).addHandler(logging.NullHandler())
 
