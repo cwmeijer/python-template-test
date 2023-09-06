@@ -24,3 +24,7 @@ def some_name():
 def test_hello_with_fixture(some_name):
     """Example using a fixture."""
     assert hello(some_name) == 'Hello Jane Smith!'
+
+def test_hello_with_fixture2(some_name):
+    """Example using a fixture."""
+    assert hello(some_name) == 'Hello Jane Smith!'
